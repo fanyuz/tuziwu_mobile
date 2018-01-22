@@ -1,0 +1,29 @@
+{
+	"index.html": {
+		"resources": [
+			"img/��;�\u0007�@2x.png",
+			"img/�-2@2x.png",
+			"img/�-3@2x.png",
+			"img/�-5-�\u001d@2x.png",
+			"img/,\u0000F@2x.png",
+			"img/��;�\u0007�-@2x.png",
+			"img/�-4@2x.png"
+		],
+		"refer": [
+			"html/circle.html",
+			"html/my.html"
+		]
+	},
+	"html/circle.html": {
+		"refer": [
+			"html/my.html",
+			"index.html"
+		]
+	},
+	"html/my.html": {
+		"refer": [
+			"html/circle.html",
+			"index.html"
+		]
+	}
+}

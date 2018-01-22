@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    	<title></title>
+		<!--样式表格式化-->
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper-4.1.0.min.css"/>
+		<!--公用样式表-->
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<!--包文件-->
+		<script type="text/javascript" src="../js/jquery.js"></script>
+		<script src="../js/swiper-4.1.0.min.js"></script>
+		<!--rem单位处理-->
+		<script src="../js/Rem.js"></script>
+		<script src="../js/public.js"></script>
+	</head>
+	<body style="background: #F3F3F3;">
+		<header id="header">
+			<div class="header_top">
+				<p class="header_return"><img src="../img/icon/top_return.png"/></p>
+				<p class="header_share"><img src="../img/icon/share.png"/></p>
+				<p class="head_title">兔子圈</p>
+				<span>RABBIT</span>
+			</div>
+		</header>
+		<div class="details_main">
+			<div class="details_chief">
+				<!--<div class="details_chief_img">
+					<img src="../img/details_chief_img.png"/>
+				</div>
+				<div class="details_chief_text">
+					<h4>00吊坠——玻璃种帝王绿福呗吊坠-小小六一开</h4>
+					<p>种质细腻通透，颜色鲜阳纯正，形状光素，用料厚实，没有绺裂的手镯是非常具有收藏价值的。翡翠手镯的美是与生俱来的，古典婉约之余也透露着时尚的气息</p>
+				</div>-->
+			</div>
+			<div class="details_center">
+				
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			var tzw_comm_id = document.URL.split("=")[1];
+			$.ajax({
+				type:"post",
+				url:"http://192.168.1.17:8083/portal/item/itemMessage",
+				data:{'tzw_item_id':tzw_comm_id},
+				async:true,
+				success:function(data){
+//					debugger;
+//					console.log(data[0].tzw_item_desc)
+					$(".details_chief").append(
+						'<div class="details_chief_img">'+
+							'<img src="'+data[0].tzw_item_picture+'"/>'+
+						'</div>'+
+						'<div class="details_chief_text">'+
+							'<h4>'+ data[0].tzw_item_name +'</h4>'+
+							'<p>'+ data[0].tzw_item_content +'</p>'+
+						'</div>'
+					)
+					$(".details_center").append(data[0].tzw_item_desc);
+					console.log($(".details_center").text())
+				}
+			});
+		})
+		
+	</script>
+</html>
