@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    	<title>猜丁壳活动页面</title>
+		<!--样式表格式化-->
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/swiper-4.1.0.min.css"/>
+		<!--公用样式表-->
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<!--包文件-->
+		<script type="text/javascript" src="../../js/jquery.js"></script>
+		<script src="../../js/swiper-4.1.0.min.js"></script>
+		<!--rem单位处理-->
+		<script src="../../js/Rem.js"></script>
+		<script src="../../js/public.js"></script>
+	</head>
+	<body  style="background: #F4F4F4;">
+		<header id="header">
+			<div class="header_top">
+				<p class="header_return"><img src="../../img/icon/top_return.png"/></p>
+				<p class="head_title">猜丁壳活动页面</p>
+			</div>
+		</header>
+		<!--<div class="guess_main">
+			<ul class="winner">
+				<li><img src="../../img/header_img.png"/></li>
+				
+			</ul>
+			<ul class="loser">
+				<li></li>
+			</ul>
+		</div>-->
+		<div class="guess_xuni">
+			<img src="../../img/img_zu.png"/>
+		</div>
+		<div class="guess_pup">
+			<div class="matching_frame">
+				<p>系统正在为您匹配</p>
+				<p>请小主稍等…</p>
+			</div>
+			<div class="activity_jx">
+				<div class="top_frame"></div>
+				<div class="vs_img">
+					<img src="../../img/vs_img.png"/>
+				</div>
+				<div class="activity_main">
+					<h5>猜丁壳对抗赛</h5>
+					<h6>您有十秒钟时间出圈</h6>
+					<div class="msg_img">
+						<div class="msg_img_left">
+							<span><img src="../../img/header_img.png"/></span>
+							<p>尼古拉斯富贵</p>
+						</div>
+						<div class="msg_center">
+							<img src="../../img/vs_center.png"/>
+						</div>
+						<div class="msg_img_right">
+							<span><img src="../../img/msg_img3.png"/></span>
+							<p>尼古拉斯富贵</p>
+						</div>
+					</div>
+					<div class="finger_game">
+						<div class="finger_left">
+							<img src="../../img/bu.png"/>
+						</div>
+						<div class="num_center">
+							9
+						</div>
+						<div class="finger_right">
+							<img src="../../img/jiandao.png"/>
+						</div>
+					</div>
+					<div class="yuying">
+						<img src="../../img/yuyin.png"/>
+					</div>
+					<div class="choose_finger">
+						<i></i>
+						<ul id="choose">
+							<li><img src="../../img/li_bu.png"/></li>
+							<li><img src="../../img/li_jiandao.png"/></li>
+							<li><img src="../../img/li_quan.png"/></li>
+						</ul>
+					</div>
+					<div class="confirm">
+						确定
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$("#choose li").click(function(){
+				$(this).addClass("activer").siblings().removeClass("activer");
+			})
+			$("#choose li").eq(0).click(function(){
+				$(".finger_right").find("img").attr("src","../../img/bu.png")
+			})
+			$("#choose li").eq(1).click(function(){
+				$(".finger_right").find("img").attr("src","../../img/jiandao.png")
+			})
+			$("#choose li").eq(2).click(function(){
+				$(".finger_right").find("img").attr("src","../../img/quantou.png")
+			})
+			
+		})
+		
+	</script>
+</html>
