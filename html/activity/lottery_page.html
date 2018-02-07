@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    	<title>抽奖活动页面</title>
+		<!--样式表格式化-->
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/swiper-4.1.0.min.css"/>
+		<!--公用样式表-->
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<!--包文件-->
+		<script type="text/javascript" src="../../js/jquery.js"></script>
+		<script src="../../js/swiper-4.1.0.min.js"></script>
+		<!--rem单位处理-->
+		<script src="../../js/Rem.js"></script>
+		<script src="../../js/public.js"></script>
+	</head>
+	<body  style="background: #F4F4F4;overflow-x: hidden;">
+		<header id="header">
+			<div class="header_top">
+				<p class="header_return"><img src="../../img/icon/top_return.png"/></p>
+				<p class="head_title">抽奖页面</p>
+			</div>
+		</header>
+		<div class="lottery_main">
+			<div class="header">
+				<img src="../../img/zuixinhw.png"/>
+			</div>
+			<div class="yaoyiyao">
+				<img src="../../img/yaoyiyao.png"/>
+			</div>
+			<p class="guize">可摇3回  选择一个号码即可</p>
+			<ul class="num_list">
+				<li><a href="javascript:;">013</a></li>
+				<li><a href="javascript:;">124</a></li>
+				<li class="active"><a href="javascript:;">328</a></li>
+			</ul>
+			<ul class="num_index">
+				<li>第一次</li>
+				<li>第二次</li>
+				<li>第三次</li>
+			</ul>
+			<h2 class="confirm_num">确定号码</h2>
+		</div>
+		<div class="lottery_pop_up">
+			<div class="pop_up">
+				<img src="../../img/pop_back2.png" class="pop_back"/>
+				<div class="pop_main">
+					<p class="pop_top">选择号码成功，请小主耐心等待结果</p>
+					<span>Please wait patiently for the result.</span>
+					<img src="../../img/diandiand.png"/>
+					<h2 class="confirm_num">点击查看号码</h2>
+					
+				</div>
+				<div class="pop_hide">
+					<img src="../../img/icon/hide.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$(".num_list li").click(function(){
+				$(this).addClass("active").siblings().removeClass("active")
+			})
+			$(".confirm_num").click(function(){
+				$(".lottery_pop_up").css("display","block")
+			})
+			$(".pop_hide").click(function(){
+				$(".lottery_pop_up").css("display","none")
+			})
+		})
+	</script>
+</html>

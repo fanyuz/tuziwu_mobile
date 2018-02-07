@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    	<title>抽奖列表</title>
+		<!--样式表格式化-->
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/swiper-4.1.0.min.css"/>
+		<!--公用样式表-->
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<!--包文件-->
+		<script type="text/javascript" src="../../js/jquery.js"></script>
+		<script src="../../js/swiper-4.1.0.min.js"></script>
+		<!--rem单位处理-->
+		<script src="../../js/Rem.js"></script>
+		<script src="../../js/public.js"></script>
+	</head>
+	<body  style="background: #F4F4F4;">
+		<header id="header">
+			<div class="header_top">
+				<p class="header_return"><img src="../../img/icon/top_return.png"/></p>
+				<p class="head_title">抽奖活动</p>
+			</div>
+		</header>
+		<div class="header_nav">
+			<ul id="circle_nav">
+				<li class="active">人民币</li>
+				<li>积分</li>
+			</ul>
+		</div>
+		<div class="activity_list">
+			<ul>
+				<li>
+					<a href="lottery_details.html">
+						<div class="msg_img"><img src="../../img/msg_img.png" alt="" /></div>
+						<p class="text-overflow1">吊坠——冰种荷叶吊坠</p>
+						<h4>1000积分</h4>
+						<button>加入活动</button>
+					</a>
+				</li>
+				<li>
+					<a href="lottery_details.html">
+						<div class="msg_img"><img src="../../img/msg_img.png" alt="" /></div>
+						<p class="text-overflow1">吊坠——冰种荷叶吊坠</p>
+						<h4>1000积分</h4>
+						<button>加入活动</button>
+					</a>
+				</li>
+				<li>
+					<a href="lottery_details.html">
+						<div class="msg_img"><img src="../../img/msg_img.png" alt="" /></div>
+						<p class="text-overflow1">吊坠——冰种荷叶吊坠</p>
+						<h4>1000积分</h4>
+						<button>加入活动</button>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload = function(){
+			$("#circle_nav li").click(function(){
+				$(this).addClass("active").siblings().removeClass("active");
+				$(".circle_main > div").eq($(this).index()).addClass("circle_active").siblings().removeClass("circle_active");
+			});
+		}
+		
+	</script>
+</html>

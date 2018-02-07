@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    	<title>抽奖详情</title>
+		<!--样式表格式化-->
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/swiper-4.1.0.min.css"/>
+		<!--公用样式表-->
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<!--包文件-->
+		<script type="text/javascript" src="../../js/jquery.js"></script>
+		<script src="../../js/swiper-4.1.0.min.js"></script>
+		<!--rem单位处理-->
+		<script src="../../js/Rem.js"></script>
+		<script src="../../js/public.js"></script>
+	</head>
+	<body  style="background: #F4F4F4;">
+		<header id="header">
+			<div class="header_top">
+				<p class="header_return"><img src="../../img/icon/top_return.png"/></p>
+				<p class="head_title">活动信息</p>
+				<span>RABBIT</span>
+			</div>
+		</header>
+		
+		<div class="shoping_det">
+			<div class="details_banner">
+				<img src="../../img/destails_banner.png"/>
+			</div>
+			<div class="details_cent">
+				<div class="msg_img">
+					<img src="../../img/msg.png"/>
+				</div>
+				<h3>00吊坠——玻璃种帝王绿福呗吊坠</h3>
+				<p>种质细腻通透，颜色鲜阳纯正，形状光素，用料厚实，没有绺裂的手镯是非常具有收藏价值的。翡翠手镯的美是与生俱来的，古典婉约之余也透露着时尚的气息</p>
+				<h4>￥123600</h4>
+			</div>
+		</div>
+		
+		<div class="det_title" style="width: 4.6rem;height: 1.12rem;">
+			<img src="../../img/huodongguiz.png"/>
+		</div>
+		<div class="activity_rule">
+			<p>1.下单时可以用积分直接选择积分抵付订单金额，积分使用时3000积分可抵1元现金使用，最少使用300积分（等于0.1元）</br>
+				2.积分不够？到我的当当--我的评论点评您购买的商品，快速获取积分，点评越翔实生动越有机会获得更多积分</br>
+				3.积分还可以直接抵付邮费，积分当钱用，攒积分享受包邮哦</br>
+				4.积分还可以到积分商城 里兑换购物礼券，有机会获得比积分抵现更高比例的优惠哦！</p>
+		</div>
+		<div class="det_title" style="width: 7.04rem;height: 1.12rem;">
+			<img src="../../img/canyu.png"/>
+		</div>
+		<div class="participate">
+			<a class="title" href="">更多参与用户<img src="../../img/icon/right_arrows.png" alt="" /></a>
+			<ul>
+				<li>
+					<div class="img"><img src="../../img/my_head.png"/></div>
+					<div class="text">
+						<p>股你那</p>
+						<span>2017-12-23 17:45:09</span>
+					</div>
+					<h5>246</h5>
+				</li>
+				<li>
+					<div class="img"><img src="../../img/my_head.png"/></div>
+					<div class="text">
+						<p>股你那</p>
+						<span>2017-12-23 17:45:09</span>
+					</div>
+					<h5>246</h5>
+				</li>
+				<li>
+					<div class="img"><img src="../../img/my_head.png"/></div>
+					<div class="text">
+						<p>股你那</p>
+						<span>2017-12-23 17:45:09</span>
+					</div>
+					<h5>246</h5>
+				</li>
+				<li>
+					<div class="img"><img src="../../img/my_head.png"/></div>
+					<div class="text">
+						<p>股你那</p>
+						<span>2017-12-23 17:45:09</span>
+					</div>
+					<h5>246</h5>
+				</li>
+			</ul>
+		</div>
+		<div class="details_footer">
+			<img src="../../img/GO@2x.png"/>
+			<p>点击直接参与活动</p>
+		</div>
+		<div class="lottery_pop_up">
+			<div class="pop_up">
+				<img src="../../img/pop_back2.png" class="pop_back"/>
+				<div class="pop_main">
+					<h3>恭喜您的号码成功获奖</h3>
+					<p>订单号：157298946732456</p>
+					<i>小主的商品正在快马加鞭的赶过来</i>
+					<img src="../../img/diandiand.png"/>
+					<div class="pop_nav">
+						<a class="active" href="javascript:;">查看订单</a>
+						<a href="javascript:;">返回首页</a>
+					</div>
+				</div>
+				<div class="pop_hide">
+					<img src="../../img/icon/hide.png"/>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$(".pop_hide").click(function(){
+				$(".lottery_pop_up").css("display","none")
+			})
+			$(".details_footer").click(function(){
+				window.location = "lottery_page.html"
+			})
+			$(".pop_nav a").click(function(){
+				$(this).addClass("active").siblings().removeClass("active");
+			})
+		})
+	</script>
+</html>

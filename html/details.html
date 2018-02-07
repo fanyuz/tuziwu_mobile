@@ -38,6 +38,28 @@
 			<div class="details_center">
 				
 			</div>
+			<p class="details_price"></p>
+		</div>
+		<div class="details_correlation">
+			<div class="correlation_top">
+				<img src="../img/xiangguan.png"/>
+			</div>
+			<div class="correlation_cent">
+				<a href=""><img src="../img/xg_img.png"/></a>
+				<a href=""><img src="../img/xg_img.png"/></a>
+				<a href=""><img src="../img/xg_img.png"/></a>
+			</div>
+		</div>
+		<div class="details_footer">
+			<div class="footer_left">
+				<p class="footer_likes">
+					<img src="../img/icon/zan.png"/>
+					1233
+				</p>
+			</div>
+			<div class="purchase_now">
+				立即购买
+			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
@@ -45,12 +67,12 @@
 			var tzw_comm_id = document.URL.split("=")[1];
 			$.ajax({
 				type:"post",
-				url:"http://192.168.1.17:8083/portal/item/itemMessage",
+				url:"http://192.168.1.17:8081/portal/item/itemMessage",
 				data:{'tzw_item_id':tzw_comm_id},
 				async:true,
 				success:function(data){
 //					debugger;
-//					console.log(data[0].tzw_item_desc)
+					console.log(data[0].tzw_item_desc)
 					$(".details_chief").append(
 						'<div class="details_chief_img">'+
 							'<img src="'+data[0].tzw_item_picture+'"/>'+
@@ -61,7 +83,11 @@
 						'</div>'
 					)
 					$(".details_center").append(data[0].tzw_item_desc);
-					console.log($(".details_center").text())
+					$(".details_price").append("￥"+data[0].tzw_item_price.toFixed(2))
+				},
+				error:function(){
+					$(".details_main").html("")
+					$(".details_correlation").html("")
 				}
 			});
 		})

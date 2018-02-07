@@ -15,6 +15,7 @@
 	<!--rem单位处理-->
 	<script src="js/Rem.js"></script>
 	<script src="js/public.js"></script>
+	<script src="js/sign_in.js"></script>
     <script type="text/javascript">
     	
    		document.addEventListener('plusready', function(){
@@ -27,7 +28,6 @@
 <body style="background: #F4F4F4;">
 	<header>
 		<div class="header_top">
-			
 			<p class="logo">
 				<img src="img/logo.png"/>
 			</p>
@@ -38,50 +38,87 @@
 		</div>
 	</header>
 	<div class="swiper-container" id="home_swiper">
-		    <div class="swiper-wrapper">
-		        <div class="swiper-slide"><img src="img/banner1.png"/></div>
-		        <div class="swiper-slide"><img src="img/banner1.png"/></div>
-		        <div class="swiper-slide"><img src="img/banner1.png"/></div>
-		        <div class="swiper-slide"><img src="img/banner1.png"/></div>
-		        <div class="swiper-slide"><img src="img/banner1.png"/></div>
-		        <div class="swiper-slide"><img src="img/banner1.png"/></div>
-		    </div>
-		    <!-- 如果需要分页器 -->
-		    <div class="swiper-pagination" style="width: 0.36rem;"></div>
-		</div>
+	    <div class="swiper-wrapper">
+	        <div class="swiper-slide"><img src="img/banner2.png"/></div>
+	        <div class="swiper-slide"><img src="img/banner2.png"/></div>
+	        <div class="swiper-slide"><img src="img/banner2.png"/></div>
+	        <div class="swiper-slide"><img src="img/banner2.png"/></div>
+	        <div class="swiper-slide"><img src="img/banner2.png"/></div>
+	        <div class="swiper-slide"><img src="img/banner2.png"/></div>
+	    </div>
+	    <!-- 如果需要分页器 -->
+	    <div class="swiper-pagination" style="width: 0.36rem;"></div>
+	</div>
 	<!--活动导航栏-->
 	<div class="home_activity_nav">
 		<div class="title_top">
-			<img src="img/hot_activ.png" alt="" />
-			<a href="">···</a>
+			<img src="img/activ_list.png" alt="" />
+		</div>
+		<ul class="activ_title">
+			<li class="activ_after"><a href="javascript:;">兑换活动</a></li>
+			<li><a href="javascript:;">抽奖活动</a></li>
+			<li><a href="javascript:;">竞拍活动</a></li>
+			<li><a href="javascript:;">猜丁壳</a></li>
+		</ul>
+		<div class="activ_img">
+			<a class="activ_show" href=""><img src="img/activity2.png"/></a>
+			<a href=""><img src="img/banner.jpg"/></a>
+			<a href=""><img src="img/activity2.png"/></a>
+			<a href=""><img src="img/banner.jpg"/></a>
+		</div>
+		<div id="activ_swiper">
+			<div class="swiper-container2">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide">
+			        	<a class="slide_box">
+			        		<h3>翡翠</h3>
+			        		<p>最低价起拍  快来抢购</p>
+			        		<i></i>
+			        		<span class="details_price">￥1200.00</span>
+			        		<div class="count_down">
+			        			<em>1</em>
+			        			<em>1</em>
+			        			<em>1</em>
+			        		</div>
+			        	</a>
+			        	<div class="slide_img"><img src="img/activ_img.png"/></div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<a class="slide_box">
+			        		<h3>翡翠</h3>
+			        		<p>最低价起拍  快来抢购</p>
+			        		<i></i>
+			        		<span class="details_price">￥1200.00</span>
+			        		<div class="count_down">
+			        			<em>1</em>
+			        			<em>1</em>
+			        			<em>1</em>
+			        		</div>
+			        	</a>
+			        	<div class="slide_img"><img src="img/activ_img.png"/></div>
+			        </div>
+			        <div class="swiper-slide">
+			        	<a class="slide_box">
+			        		<h3>翡翠</h3>
+			        		<p>最低价起拍  快来抢购</p>
+			        		<i></i>
+			        		<span class="details_price">￥1200.00</span>
+			        		<div class="count_down">
+			        			<em>1</em>
+			        			<em>1</em>
+			        			<em>1</em>
+			        		</div>
+			        	</a>
+			        	<div class="slide_img"><img src="img/activ_img.png"/></div>
+			        </div>
+			    </div>
+			</div>
+		</div>
+		<div class="activity_background">
 			
-		</div>
-		<div class="activity_li">
-			<ul id="activit_paternal">
-				<li>
-					<a href="">
-						<img src="img/activity.png"/>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="img/activ2.png"/>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<img src="img/acriv3.png"/>
-					</a>
-				</li>
-				<li>
-					
-					<a href="">
-						<img src="img/activ4.png"/>
-					</a>
-				</li>
-			</ul>
-		</div>
+		</div>	
 	</div>
+	
 	<!--首页商品列表-->
 	<div class="home_commodity">
 		<div class="comm_top">
@@ -118,7 +155,7 @@
 			<img src="img/icon/home1.png"/>
 		</a>
 		
-		<a href="">
+		<a href="html/activity/activity_index.html">
 			<img src="img/icon/activ.png"/>
 		</a>
 		<a href="html/circle.html">
@@ -128,6 +165,35 @@
 			<img src="img/icon/my.png"/>
 		</a>
 	</footer>
+	<!--<div class="home_sign_in">
+		<div class="sign_in_top">
+			<p class="sign_in_return"><img src="img/icon/top_return.png"/></p>
+			<h3>签到</h3>
+		</div>
+	    <div class="account-box">
+	        <h2 class="account-title">
+	            <span class="c3">日历日期</span>
+	            <div class="clearfix">
+	                <span class="f-month">1</span>
+	            </div>
+	        </h2>
+	        <div class="f-rili-table">
+	            <div class="f-rili-head celarfix">
+	                <div class="f-rili-th">SUN</div>
+	                <div class="f-rili-th">MON</div>
+	                <div class="f-rili-th">TUE</div>
+	                <div class="f-rili-th">WED</div>
+	                <div class="f-rili-th">THU</div>
+	                <div class="f-rili-th">FRI</div>
+	                <div class="f-rili-th">SAT</div>
+	                <div class="clear"></div>
+	            </div>
+	            <div class="f-tbody clearfix">
+	
+	            </div>
+	        </div>
+	    </div>
+	</div>-->
 </body>
 <script>  
 	window.onload = function(){
@@ -135,7 +201,6 @@
 		    direction: 'horizontal',
 		    loop: true,
 		    autoplay: true,
-		    
 		    // 如果需要分页器
 		    pagination: {
 		      el: '.swiper-pagination',
@@ -143,6 +208,20 @@
 		    },
 		    
 		});
+		var mySwiper = new Swiper ('.swiper-container2', {
+		    roundLengths : true, 
+			initialSlide :0,
+			speed:500,
+			loop: true,
+			slidesPerView:"auto",
+			centeredSlides : true,
+			followFinger : false,
+		    
+		});
+		$(".activ_title>li").click(function(){
+			$(this).addClass("activ_after").siblings().removeClass("activ_after");
+			$(".activ_img>a").eq($(this).index()).addClass("activ_show").siblings().removeClass("activ_show");
+		})
 		
 		//设置活动导航的父级宽度
 //		var html_size = parseFloat(getComputedStyle(window.document.documentElement)['font-size']);
@@ -153,12 +232,12 @@
 		$.ajax({
 			type:"get",
 			dataType:"json",
-			url:"http://192.168.1.17:8083/portal/item/newItem",
+			url:"http://192.168.1.17:8081/portal/item/remaiItem",
 			async:true,
 			success:function(data){
 //				debugger;
 				console.log(data)
-				window.sessionStorage.user_id = data[0].tzw_item_id;
+//				window.sessionStorage.user_id = data[0].tzw_item_id;
 				var _data = data;
 				for (var i=0;i<_data.length;i++) {
 					$("#commodity").append(
