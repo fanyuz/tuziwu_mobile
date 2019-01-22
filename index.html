@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title></title>
+    <title>兔子屋翡翠</title>
 	<!--样式表格式化-->
 	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 	<link rel="stylesheet" type="text/css" href="css/swiper-4.1.0.min.css"/>
@@ -62,9 +62,9 @@
 		</ul>
 		<div class="activ_img">
 			<a class="activ_show" href=""><img src="img/activity2.png"/></a>
-			<a href=""><img src="img/banner.jpg"/></a>
+			<a href=""><img src="img/banner1.png"/></a>
 			<a href=""><img src="img/activity2.png"/></a>
-			<a href=""><img src="img/banner.jpg"/></a>
+			<a href=""><img src="img/banner1.png"/></a>
 		</div>
 		<div id="activ_swiper">
 			<div class="swiper-container2">
@@ -139,6 +139,7 @@
 			<a href="" class="comm_list">
 				<div class="comm_img">
 					<img src="img/comm2.png"/>
+					<span><i>抽奖</i></span>
 				</div>
 				<div class="comm_text">
 					<h3>翡翠</h3>
@@ -197,6 +198,10 @@
 </body>
 <script>  
 	window.onload = function(){
+		
+		document.cookie = "name=fanyuz&psd=123";
+		console.log(document.cookie)
+		
 		var mySwiper = new Swiper ('.swiper-container', {
 		    direction: 'horizontal',
 		    loop: true,

@@ -357,10 +357,11 @@ footer{
                         font-size: 0.6rem;
                         line-height: 1rem;
                         text-align: center;
+                        color: #161516;
                         font-weight: 600;
                         display: block;
                         box-sizing: border-box;
-                        border: 0.02rem solid #4b4b4b;
+                        border: 1px solid #4b4b4b;
                         float: left;
                         margin-left: 0.1rem;
                         position: relative;
@@ -445,6 +446,63 @@ footer{
                 width: 100%;
                 height: 100%;
             }
+            span{
+                position: absolute;
+                top: 2.4rem;
+                left: 5rem;
+                width: 0.32rem;
+                height: 0.32rem;
+                background: #FFFFFF;
+                border: 0.08rem solid #161516;
+                border-radius: 50%;
+                i{
+                    min-width: 1.2rem;
+                    height: 1.16rem;
+                    font-size: 0.44rem;
+                    text-align: center;
+                    line-height: 1.16rem;
+                    color: #FFFFFF;
+                    padding: 0 0.3rem;
+                    background: #0b0b0b;
+                    position: absolute;
+                    top: 50%;
+                    left: -2.4rem;
+                    transform: translateY(-50%);
+                    &:after{
+                        content: "";
+                        width: 0.32rem;
+                        height: 0.4rem;
+                        background: url(../img/icon/left_b.png) no-repeat;
+                        background-size: 100%;
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        transform: translate(100%,-50%);
+                    }
+                }
+                &:after{
+                    content: "";
+                    position: absolute;
+                    width: 0.16rem;
+                    height: 0.16rem;
+                    background: red;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+                &:before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    animation: biaoqian 1.4s;
+                    animation-iteration-count:infinite;
+                    border-radius: 50%;
+                    background: rgba(0,0,0,0.4);
+                }
+            }
         }
         .comm_text{
             width: 100%;
@@ -498,6 +556,21 @@ footer{
         }
     }
 }
+@keyframes biaoqian{
+    1%{
+        width: 0.48rem;
+        height: 0.48rem;
+    }
+    50%{
+        width: 1.36rem;
+        height: 1.36rem;
+    }
+    100%{
+        width: 0.48rem;
+        height: 0.48rem;
+    }
+}
+
 /**********首页签到************/
 
 .home_sign_in{
@@ -1272,7 +1345,7 @@ footer{
     a{
         width: 2rem;
         height: 0.88rem;
-        border: 0.02rem solid #161516;
+        border: 1px solid #161516;
         position: absolute;
         top: 0;
         right: 0.48rem;
@@ -1350,7 +1423,7 @@ footer{
                 }
             }
             p{
-                font-size: 0.3rem;
+                font-size: 0.4rem;
                 color: #161516;
                 text-align: center;
                 line-height: 1.04rem;
@@ -1389,6 +1462,7 @@ footer{
             margin: 0 0.36rem;
             border-radius: 0.16rem;
             overflow: hidden;
+            box-shadow: 0 0 0.08rem 0.02rem #CDCDCD;
             a{
                 width: 100%;
                 height: 4.4rem;
@@ -1522,7 +1596,7 @@ footer{
         button{
             width: 2.9rem;
             height: 0.88rem;
-            border: 0.02rem solid #161516;
+            border: 1px solid #161516;
             background: #fff;
             line-height: 0.84rem;
             color: #161516;
@@ -1537,6 +1611,7 @@ footer{
 .exchange_pop{
     width: 100vw;
     height: 100vh;
+    display: none;
     background: rgba(0,0,0,0.6);
     position: fixed;
     top: 0;
@@ -2393,10 +2468,11 @@ footer{
 .guess_pup{
     width: 100vw;
     height: 100vh;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     z-index: 9999999;
     .matching_frame{
         width: 9.2rem;
@@ -2419,6 +2495,68 @@ footer{
             text-align: center;
             
         }
+        
+    }
+    .resurgence{
+        width: 9.2rem;
+        height: 5.6rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+        .frame_top{
+            width: 9.2rem;
+            height: 3.7rem;
+            background: #FFFFFF;
+            border-top: 0.1rem solid #FFDC19;
+            border-radius: 0.16rem;
+            padding-top: 0.6rem;
+            box-sizing: border-box;
+            p{
+                font-size: 0.8rem;
+                line-height: 1.2rem;
+                color: #161516;
+                font-weight: 600;
+                text-align: center;
+                
+            }
+            span{
+                display: block;
+                font-size: 0.6rem;
+                line-height: 1.2rem;
+                color: #161516;
+                font-weight: 600;
+                text-align: center;
+            }
+        }
+        .pop_nav{
+            width: 8.6rem;
+            height: 1.2rem;
+            background: #FFFFFF;
+            border: 0.14rem solid #FFFFFF;
+            border-radius: 0.7rem;
+            position: absolute;
+            left: 50%;
+            bottom: 0rem;
+            transform: translateX(-50%);
+            a{
+                display: block;
+                width: 50%;
+                height: 100%;
+                line-height: 1.2rem;
+                text-align: center;
+                color: #757575;
+                float: left;
+                font-weight: 600;
+            }
+            .active{
+                background: #161516;
+                color: #FFFFFF;
+                border-radius: 0.6rem;
+            }
+        }
+        
     }
     .activity_jx{
         width: 12.3rem;
@@ -2592,5 +2730,12 @@ footer{
             }
         }
         
+    }
+}
+.exchange_footer {
+    padding-top: 0.2rem;
+    box-sizing: border-box;
+    p{
+        line-height: 0.70rem !important;
     }
 }

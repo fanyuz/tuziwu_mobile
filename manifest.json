@@ -111,7 +111,7 @@
         "popGesture": "close",/*设置应用默认侧滑返回关闭Webview窗口，"none"为无侧滑返回功能，"hide"为侧滑隐藏Webview窗口。参考http://ask.dcloud.net.cn/article/102*/
         "runmode": "normal",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
         "signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
-        "distribute": {
+        "distribute": {"plugins":{"payment":{}},
             "apple": {
                 "appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
                 "mobileprovision": "",/*iOS应用打包配置文件*/
@@ -173,32 +173,32 @@
                 "ios": {
                     "iphone": {
                         "default": "", /*iPhone3启动图片选，分辨率：320x480*/
-                        "retina35": "",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
-                        "retina40": "",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
-                        "retina47": "",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
-                        "retina55": "",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
-                        "retina55l": ""/*5.5 英寸设备(iPhone6 Plus)横屏启动图片，分辨率：2208x1242*/
+                        "retina35": "img/20180208141656.png",/*3.5英寸设备(iPhone4)启动图片，分辨率：640x960*/
+                        "retina40": "img/20180208141656.png",/*4.0 英寸设备(iPhone5/iPhone5s)启动图片，分辨率：640x1136*/
+                        "retina47": "img/20180208141656.png",/*4.7 英寸设备(iPhone6)启动图片，分辨率：750x1334*/
+                        "retina55": "img/20180208141656.png",/*5.5 英寸设备(iPhone6 Plus)启动图片，分辨率：1242x2208*/
+                        "retina55l": "img/20180208141656.png","iphonex":"img/20180208141656.png","iphonexl":"img/20180208141656.png"/*5.5 英寸设备(iPhone6 Plus)横屏启动图片，分辨率：2208x1242*/
                     },
                     "ipad": {
-                        "portrait": "", /*iPad竖屏启动图片，分辨率：768x1004*/
-                        "portrait-retina": "",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
-                        "landscape": "", /*iPad横屏启动图片，分辨率：1024x748*/
-                        "landscape-retina": "", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
-                        "portrait7": "", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
-                        "portrait-retina7": "",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
-                        "landscape7": "", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
-                        "landscape-retina7": ""/*iPad iOS7高分屏横屏启动图片，分辨率：2048x1536*/
+                        "portrait": "img/20180208141656.png", /*iPad竖屏启动图片，分辨率：768x1004*/
+                        "portrait-retina": "img/20180208141656.png",/*iPad高分屏竖屏图片，分辨率：1536x2008*/
+                        "landscape": "img/20180208141656.png", /*iPad横屏启动图片，分辨率：1024x748*/
+                        "landscape-retina": "img/20180208141656.png", /*iPad高分屏横屏启动图片，分辨率：2048x1496*/
+                        "portrait7": "img/20180208141656.png", /*iPad iOS7竖屏启动图片，分辨率：768x1024*/
+                        "portrait-retina7": "img/20180208141656.png",/*iPad iOS7高分屏竖屏图片，分辨率：1536x2048*/
+                        "landscape7": "img/20180208141656.png", /*iPad iOS7横屏启动图片，分辨率：1024x768*/
+                        "landscape-retina7": "img/20180208141656.png"/*iPad iOS7高分屏横屏启动图片，分辨率：2048x1536*/
                     }
                 },
                 "android": {
                     "mdpi": "", /*普通屏启动图片，分辨率：240x282*/
                     "ldpi": "", /*大屏启动图片，分辨率：320x442*/
-                    "hdpi": "", /*高分屏启动图片，分辨率：480x762*/
-                    "xhdpi": "", /*720P高分屏启动图片，分辨率：720x1242*/
-                    "xxhdpi": ""/*1080P高分屏启动图片，分辨率：1080x1882*/
+                    "hdpi": "img/20180208141656.png", /*高分屏启动图片，分辨率：480x762*/
+                    "xhdpi": "img/20180208141656.png", /*720P高分屏启动图片，分辨率：720x1242*/
+                    "xxhdpi": "img/20180208141656.png"/*1080P高分屏启动图片，分辨率：1080x1882*/
                 }
             }
-        }
+        },"ads":{"rp":true,"splash":true,"push":true},"adid":""
     },
 	"dependencies": {
 		"pages": {
@@ -214,7 +214,9 @@
 				],
 				"refer": [
 					"html/circle.html",
-					"html/my.html"
+					"html/my.html",
+					"html/activity/activity_index.html",
+					"html/details.html"
 				],
 				"priority": 0
 			},
@@ -222,7 +224,8 @@
 				"resources": [],
 				"refer": [
 					"html/my.html",
-					"index.html"
+					"index.html",
+					"html/activity/activity_index.html"
 				],
 				"priority": 0
 			},
@@ -230,7 +233,32 @@
 				"resources": [],
 				"refer": [
 					"html/circle.html",
-					"index.html"
+					"index.html",
+					"html/activity/activity_index.html"
+				],
+				"priority": 0
+			},
+			"html/activity/activity_index.html": {
+				"resources": [],
+				"refer": [
+					"html/activity/guess_list.html",
+					"html/activity/lottery_list.html",
+					"html/circle.html",
+					"html/activity/activity_list.html"
+				],
+				"priority": 0
+			},
+			"html/activity/guess_list.html": {
+				"resources": [],
+				"refer": [
+					"html/activity/activity_index.html"
+				],
+				"priority": 0
+			},
+			"html/activity/activity_list.html": {
+				"resources": [],
+				"refer": [
+					"html/activity/activity_index.html"
 				],
 				"priority": 0
 			}

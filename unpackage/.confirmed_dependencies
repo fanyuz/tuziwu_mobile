@@ -1,29 +1,51 @@
 {
-	"index.html": {
-		"resources": [
-			"img/ï¿½ï¿½;ï¿½\u0007ï¿½@2x.png",
-			"img/ï¿½-2@2x.png",
-			"img/ï¿½-3@2x.png",
-			"img/ï¿½-5-ï¿½\u001d@2x.png",
-			"img/,\u0000F@2x.png",
-			"img/ï¿½ï¿½;ï¿½\u0007ï¿½-@2x.png",
-			"img/ï¿½-4@2x.png"
-		],
-		"refer": [
-			"html/circle.html",
-			"html/my.html"
-		]
-	},
-	"html/circle.html": {
-		"refer": [
-			"html/my.html",
-			"index.html"
-		]
-	},
-	"html/my.html": {
-		"refer": [
-			"html/circle.html",
-			"index.html"
-		]
-	}
+  "index.html": {
+    "resources": [
+      "img/ýý;ý\u0007ý@2x.png",
+      "img/ý-2@2x.png",
+      "img/ý-3@2x.png",
+      "img/ý-5-ý\u001d@2x.png",
+      "img/,\u0000F@2x.png",
+      "img/ýý;ý\u0007ý-@2x.png",
+      "img/ý-4@2x.png"
+    ],
+    "refer": [
+      "html/circle.html",
+      "html/my.html",
+      "html/activity/activity_index.html",
+      "html/details.html"
+    ]
+  },
+  "html/circle.html": {
+    "refer": [
+      "html/my.html",
+      "index.html",
+      "html/activity/activity_index.html"
+    ]
+  },
+  "html/my.html": {
+    "refer": [
+      "html/circle.html",
+      "index.html",
+      "html/activity/activity_index.html"
+    ]
+  },
+  "html/activity/activity_index.html": {
+    "refer": [
+      "html/activity/guess_list.html",
+      "html/activity/lottery_list.html",
+      "html/circle.html",
+      "html/activity/activity_list.html"
+    ]
+  },
+  "html/activity/guess_list.html": {
+    "refer": [
+      "html/activity/activity_index.html"
+    ]
+  },
+  "html/activity/activity_list.html": {
+    "refer": [
+      "html/activity/activity_index.html"
+    ]
+  }
 }

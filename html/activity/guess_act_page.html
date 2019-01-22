@@ -47,7 +47,7 @@
 				</div>
 				<div class="activity_main">
 					<h5>猜丁壳对抗赛</h5>
-					<h6>您有十秒钟时间出圈</h6>
+					<h6>您有十秒钟时间出拳</h6>
 					<div class="msg_img">
 						<div class="msg_img_left">
 							<span><img src="../../img/header_img.png"/></span>
@@ -88,10 +88,29 @@
 					</div>
 				</div>
 			</div>
+			<div class="resurgence">
+				<div class="frame_top">
+					<p>小主不要放弃</p>
+					<span>使用复活卡可以继续战斗</span>
+				</div>
+				<div class="pop_nav">
+					<a class="active" href="javascript:;">使用</a>
+					<a href="javascript:;" id="return">取消</a>
+				</div>
+			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
 		$(function(){
+			setTimeout(pupShow,2000);
+			setTimeout(actShow,5000);
+			function pupShow(){
+				$(".guess_pup").css("display","block");
+			}
+			function actShow(){
+				$(".matching_frame").css("display","none");
+				$(".activity_jx").css("display","block");
+			}
 			$("#choose li").click(function(){
 				$(this).addClass("activer").siblings().removeClass("activer");
 			})
@@ -103,6 +122,13 @@
 			})
 			$("#choose li").eq(2).click(function(){
 				$(".finger_right").find("img").attr("src","../../img/quantou.png")
+			})
+			$(".confirm").click(function(){
+				$(".activity_jx").css("display","none");
+				$(".resurgence").css("display","block")
+			})
+			$("#return").click(function(){
+				$(".guess_pup").css("display","none");
 			})
 			
 		})
